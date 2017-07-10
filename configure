@@ -493,26 +493,29 @@ post_process_cmdline() {
     soft_enable delta_q
     soft_enable tile_groups
     soft_enable rect_tx
-    soft_enable global_motion
-    soft_enable ext_tx
+    #soft_enable global_motion
+    #soft_enable ext_tx
     soft_enable cdef
     soft_enable ec_adapt
     soft_enable ext_intra
     soft_enable mv_compress
-    soft_enable ext_refs
-    soft_enable dual_filter
+    #soft_enable ext_refs
+    #soft_enable dual_filter
     soft_enable motion_var
-    soft_enable warped_motion
+    #soft_enable warped_motion
     soft_enable ext_delta_q
     soft_enable loopfiltering_across_tiles
     soft_enable ec_smallmul
     soft_enable var_tx
-    soft_enable ext_inter
-    soft_enable wedge
-    soft_enable compound_segment
-    soft_enable interintra
+    #soft_enable ext_inter
+    #soft_enable wedge
+    #soft_enable compound_segment
+    #soft_enable interintra
     soft_enable one_sided_compound
     soft_enable smooth_hv
+
+    # enable perceptual rate control
+    soft_enable xiphrc
 
     # Backwards/jenkins compatibility with --enable-aom-highbitdepth
     enabled aom_highbitdepth && enable_feature highbitdepth
